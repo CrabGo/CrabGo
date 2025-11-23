@@ -1,0 +1,37 @@
+server:
+  address:     ":8000"
+  openapiPath: "/api.json"
+  swaggerPath: "/swagger"
+  logger:
+    path: "logs"                            # 日志文件路径。默认为空，表示关闭，仅输出到终端
+    level: "all"                             # 日志输出级别
+    timeFormat: "2006-01-02 15:04:05"       #自定义日志输出的时间格式，使用Golang标准的时间格式配置
+    rotateCheckInterval: "24h"               # 滚动切分的时间检测间隔，一般不需要设置。默认为1小时
+    stdoutColorDisabled: "false"             # 关闭终端的颜色打印。默认开启
+
+tcp:
+  address: ":8001"
+udp:
+  address: ":8002"
+grpc:
+  address: ":8003"
+
+# 日志配置
+logger:
+  path  : "logs"                            # 日志文件路径。默认为空，表示关闭，仅输出到终端
+  level : "all"                             # 日志输出级别
+  timeFormat  : "2006-01-02 15:04:05"       #自定义日志输出的时间格式，使用Golang标准的时间格式配置
+  rotateCheckInterval : "24h"               # 滚动切分的时间检测间隔，一般不需要设置。默认为1小时
+  stdoutColorDisabled : "false"             # 关闭终端的颜色打印。默认开启
+
+# Redis 配置示例
+redis:
+  default:
+    address: 192.168.9.125:6379
+    db:      1
+    pass:    "Zaq12wsX"
+
+database:
+  default:
+    link: "sqlite::@file(manifest/database/sqlite/DCIM.NEXT.db)"
+
