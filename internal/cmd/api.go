@@ -23,7 +23,14 @@ var (
 					hello.NewV1(),
 				)
 			})
+
+			go func() {
+				<-ctx.Done()
+				g.Log().Info(ctx, "正在关闭API服务")
+				s.Shutdown()
+			}()
 			s.Run()
+
 			return nil
 		},
 	}
