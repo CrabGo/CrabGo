@@ -2,9 +2,17 @@
 # CLI tool, only in development environment.
 # https://goframe.org/docs/cli
 gfcli:
+  build:
+    name: "crabgo"
+    arch: "amd64,arm64"
+    system: "linux,windows,darwin"
+    mod: "none"
+    packSrc: "resource,manifest"
+    version: "v0.0.1"
+    path: "build"
   gen:
     dao:
-      - link: "sqlite::@file(manifest/database/sqlite/DCIM.NEXT.db)"
+      - link: "sqlite::@file(resource/NEXT.db)"
         descriptionTag: true
         jsonCase: CamelLower
 

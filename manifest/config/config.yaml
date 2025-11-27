@@ -33,5 +33,13 @@ redis:
 
 database:
   default:
-    link: "sqlite::@file(manifest/database/sqlite/DCIM.NEXT.db)"
+    link: "sqlite::@file(resource/NEXT.db)"
+    debug:  true
+
+jwt:
+  Issuer: "crab"
+  Subject:  "go"
+  Audience: "crab"
+  Expires : 118
+
 

@@ -6,11 +6,13 @@ import (
 	"github.com/gogf/gf/v2/frame/g"
 )
 
+// Options TCP的配置项
 type Options struct {
-	Address    string
-	BufferSize int
+	Address    string //启动地址
+	BufferSize int    //每次接受字节大小
 }
 
+// GetOptions 获取配置并解析到对象
 func GetOptions(ctx context.Context) (Options, error) {
 	options := Options{
 		Address:    ":8001",
