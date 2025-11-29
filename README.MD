@@ -20,3 +20,8 @@
 go get github.com/olekukonko/tablewriter@v1.1.0
 `
 对应版本在github上查看:https://github.com/gogf/gf/blob/master/go.mod
+
+## 更新所有直接依赖包到最新版本
+`
+go get -u
+`

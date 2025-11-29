@@ -5,6 +5,5 @@
 package logic
 
 import (
-	_ "CrabGo/internal/logic/machine"
 	_ "CrabGo/internal/logic/user"
 )

@@ -3,7 +3,7 @@ package cmd
 import (
 	"CrabGo/internal/controller/auth"
 	"CrabGo/internal/controller/build"
-	"CrabGo/internal/controller/machine"
+	"CrabGo/internal/controller/system"
 	"context"
 
 	"github.com/gogf/gf/v2/errors/gcode"
@@ -26,7 +26,7 @@ var (
 				group.Bind(
 					hello.NewV1(),
 					auth.NewV1(),
-					machine.NewV1(),
+					system.NewV1(),
 					build.NewV1(),
 				)
 			})
