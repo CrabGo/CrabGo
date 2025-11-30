@@ -4,6 +4,7 @@ import (
 	"CrabGo/internal/controller/auth"
 	"CrabGo/internal/controller/build"
 	"CrabGo/internal/controller/system"
+	"CrabGo/internal/controller/tenant"
 	"context"
 
 	"github.com/gogf/gf/v2/errors/gcode"
@@ -27,6 +28,7 @@ var (
 					hello.NewV1(),
 					auth.NewV1(),
 					system.NewV1(),
+					tenant.NewV1(),
 					build.NewV1(),
 				)
 			})
