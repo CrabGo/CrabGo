@@ -88,7 +88,7 @@ type TenantViewModel struct {
 type QueryPageRes api.PaginationRes
 
 type QueryListReq struct {
-	g.Meta `path:"/tenant/page" tags:"tenant" method:"post" summary:"查询租户"`
+	g.Meta `path:"/tenant/list" tags:"tenant" method:"post" summary:"查询租户"`
 	api.PaginationReq
 	Code        string          `json:"code"  dc:"租户编码"`
 	Name        string          `json:"name" dc:"租户名称"`
