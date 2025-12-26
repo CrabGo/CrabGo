@@ -76,15 +76,12 @@ var TCP = &gcmd.Command{
 				log.Errorf(ctx, "服务端关闭出现错误,错误信息:%v", err)
 				return
 			}
-		}()
 
-		err = server.Run()
+		}()
 
 		log.Info(ctx, "TCP服务启动成功")
 
-		if err != nil {
-			log.Errorf(ctx, "TCP服务启动失败,%v", err)
-		}
+		server.Run()
 
 		return nil
 	},

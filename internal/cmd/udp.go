@@ -55,10 +55,16 @@ var UDP = &gcmd.Command{
 		go func() {
 			<-ctx.Done()
 			g.Log().Info(ctx, "正在关闭UDP服务")
-			server.Close()
+			err := server.Close()
+			if err != nil {
+				log.Errorf(ctx, "服务端关闭出现错误,错误信息:%v", err)
+				return
+			}
 		}()
 
 		log.Info(ctx, "UDP服务启动成功")
+
+		server.Run()
 
 		return nil
 	},

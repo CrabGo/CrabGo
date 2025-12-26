@@ -67,8 +67,7 @@ var ALL = &gcmd.Command{
 				if err != nil {
 					g.Log().Fatalf(ctx, "%v 启动出现错误:%v", command.Name, err)
 				}
-
-				g.Log().Infof(ctx, "%v 启动成功", command.Name)
+				//g.Log().Infof(ctx, "%v 启动成功", command.Name)
 			}(command)
 		}
 		sigs := make(chan os.Signal, 1)
